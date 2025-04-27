@@ -1,0 +1,152 @@
+/* VARIABLES GLOBALES */
+:root {
+  /* Colores principales */
+  --color-morado: #5d3a6f;
+  --color-morado-oscuro: #4a2d59;
+  --color-dorado: #ffcc00;
+  --color-beige: #f0e6d2;
+  --color-beige-oscuro: #e0d6c2;
+  --color-vino: #5a4b8b;
+}
+
+/* ESTILOS GENERALES */
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--color-beige);
+  padding-top: 70px; /* Espacio para navbar fija */
+}
+
+/* Fondo con logo */
+body::after {
+  content: "";
+  background-image: url('../images/logo.png');
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  opacity: 0.40;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* NAVEGACION */
+.navbar {
+  background-color: var(--color-morado) !important;
+  border-bottom: 2px solid var(--color-dorado);
+}
+
+.navbar-brand {
+  color: var(--color-dorado) !important;
+  font-weight: bold;
+}
+
+
+
+/* BOTONES */
+.btn-primary {
+  background-color: var(--color-morado) !important;
+  border-color: var(--color-morado) !important;
+  color: var(--color-dorado) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-morado-oscuro) !important;
+  border-color: var(--color-morado-oscuro) !important;
+}
+
+/* TARJETAS */
+.card {
+  border-color: var(--color-dorado);
+}
+
+.card-header {
+  background-color: var(--color-morado);
+  color: var(--color-dorado);
+}
+
+.border-primary{
+  border-color: var(--color-morado-oscuro) !important;
+}
+
+.bg-primary{
+  background-color: var(--color-vino) !important;
+  border-color: var(--color-dorado) !important;
+}
+.text-primary {
+  color: var(--color-morado) !important;
+}
+/* PAGINACION */
+.pagination .page-item.active .page-link {
+  background-color: var(--color-morado);
+  border-color: var(--color-morado);
+  color: var(--color-dorado);
+}
+
+.pagination .page-link {
+  color: var(--color-morado);
+}
+
+.pagination .page-link:hover {
+  background-color: var(--color-morado-oscuro);
+  color: var(--color-dorado);
+  border-color: var(--color-morado-oscuro);
+}
+
+/* TABLAS */
+
+/* Estilo base para todas las tablas */
+.table {
+  background-color: white;
+  border-color: var(--color-dorado);
+}
+
+/* Filas alternas */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(240, 230, 210, 0.4);
+}
+
+/* Efecto hover */
+.table tbody tr:hover {
+  background-color: rgba(93, 58, 111, 0.1);
+}
+
+/* Cabeceras de tabla */
+.table th, .table-bebidas th {
+  background-color: var(--color-morado) !important;
+  color: var(--color-dorado) !important;
+}
+
+/* BOTONES PEQUEÑOS */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* FORMULARIOS */
+.form-control {
+  border-color: var(--color-dorado);
+}
+
+.form-control:focus {
+  border-color: var(--color-morado);
+  box-shadow: 0 0 0 0.2rem rgba(93, 58, 111, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--color-morado);
+  border-color: var(--color-morado);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color-morado);
+  color: var(--color-dorado);
+  border-top: 2px solid var(--color-dorado);
+}
+
+.social-icon {
+  color: var(--color-dorado) !important;
+}
