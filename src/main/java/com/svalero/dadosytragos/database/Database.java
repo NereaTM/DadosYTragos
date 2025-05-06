@@ -11,7 +11,8 @@ public class Database {
     public void connect() throws ClassNotFoundException, SQLException {
         Class.forName("org.mariadb.jdbc.Driver");
         connection = DriverManager.getConnection(
-                "jdbc:mariadb://localhost:3306/dados_y_tragos?useUnicode=true&characterEncoding=UTF-8",
+                "jdbc:mariadb://localhost:3306/dados_y_tragos?useUnicode=true&characterEncoding=UTF-8", // local
+               //   "jdbc:mariadb://localhost:3307/dados_y_tragos?useUnicode=true&characterEncoding=UTF-8", // docker
                 "root",  // usuario
                 "nerea"   // contraseña
         );

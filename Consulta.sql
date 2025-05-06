@@ -27,8 +27,8 @@ fecha_registro DATE
 );
 
 CREATE TABLE usuarios (
-id INT AUTO_INCREMENT PRIMARY KEY,
-nombre VARCHAR(50) NOT NULL UNIQUE,
+id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+usuario VARCHAR(50) NOT NULL UNIQUE,
 role TINYINT DEFAULT 0,
 contrasena VARCHAR(100) NOT NULL,
 apellido VARCHAR(100),
@@ -67,7 +67,6 @@ FOREIGN KEY (id_juego) REFERENCES juegos(id_juego),
 FOREIGN KEY (id_bebida) REFERENCES bebidas(id_bebida),
 FOREIGN KEY (id_comida) REFERENCES comidas(id_comida)
 );
-
 
 INSERT INTO juegos (nombre, descripcion, categoria, min_jugadores, max_jugadores, edad_minima, disponible, fecha_adquisicion, valor_adquisicion, ruta_imagen) VALUES
 ('Munchkin Clasico', 'Juego de cartas de humor y parodia, donde debes armarte para derrotar monstruos y traicionar amigos para poder ganar', 'Cartas', 3, 6, 12, TRUE, '2024-05-15', 25.99, NULL),
@@ -118,4 +117,4 @@ INSERT INTO usuarios (usuario, contrasena, role, apellido, email, fecha_registro
 ('Lucia', SHA1('123'), '0', 'Sancho', 'luciao@gmail.com', '2025-04-06', '1992-03-22', 33, 80.00),
 ('Javier', SHA1('123'), '0', 'Gallardo', 'javier@gmail.com', '2025-04-06', '1988-11-30', 36, 210.25),
 ('Marta', SHA1('123'), '0', 'Paesa', 'marta@gmail.com', '2025-04-09', '1999-04-10', 26, 65.30),
-('Ana', SHA1('123'), '0', 0, 'Torres', 'ana@gmail.com', '2025-04-10', '1990-12-01', 34, 150.75);
+('Ana', SHA1('123'), '0', 'Torres', 'ana@gmail.com', '2025-04-10', '1990-12-01', 34, 150.75);

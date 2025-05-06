@@ -1,0 +1,11 @@
+
+services:
+  db-test:
+    image: mariadb:10.11
+    environment:
+      MYSQL_ROOT_PASSWORD: nerea
+      MYSQL_DATABASE: dados_y_tragos
+    volumes:
+      - ./Consulta.sql:/docker-entrypoint-initdb.d/Consulta.sql:ro
+    ports:
+      - "3307:3306"

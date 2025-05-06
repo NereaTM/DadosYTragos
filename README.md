@@ -39,7 +39,7 @@ DadosYTragos/
 2. Configura tu base de datos con el script `Consulta.sql`.
 3. Ajusta el archivo `Database.java` si cambias usuario o contraseña.
 4. Usa Maven para desplegar:
-    - `mvn tomcat7:run` - Para levantar Tomcat.
+    `mvn tomcat7:run` - Para levantar Tomcat.
 
 ## Funcionalidades principales
 - Registro e inicio de sesión de usuarios con varios roles.
@@ -47,6 +47,20 @@ DadosYTragos/
 - Buscador en todas las tablas.
 - Paginación y validaciones de formularios.
 
+## Docker
+1. Cambiar el puerto de la base de datos de 3306 a 3307
+2. Ejecutar docker compose
+   ```bash
+    docker compose up -d
+     ```
+2. Desplegar la aplicacion
+   `mvn tomcat7:run`
+
+3. Para poder apagar docker compose 
+   ```bash
+    docker compose down
+     ```
+   
 ---
 
 <p align="center">
